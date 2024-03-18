@@ -1,11 +1,11 @@
-import {Index} from "../../components/header";
+import {Header} from "../../components/header/index";
 import {Outlet} from "react-router-dom";
 import {LayoutContainer} from "./styles";
 
 export function Index() {
     return (
         <LayoutContainer>
-            <Index/>
+            <Header/>
             <Outlet/>
         </LayoutContainer>
     )

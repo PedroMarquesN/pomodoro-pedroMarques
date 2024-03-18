@@ -1,4 +1,3 @@
-import {Index} from "../components/header";
 
 export function Home() {
     return(
