@@ -1,4 +1,4 @@
-export function Header() {
+export function Index() {
     return(
         <h1>HEADER</h1>
     )

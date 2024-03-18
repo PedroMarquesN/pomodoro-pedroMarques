@@ -1,4 +1,4 @@
-import {Header} from "../components/Header";
+import {Index} from "../components/header";
 
 export function Home() {
     return(
