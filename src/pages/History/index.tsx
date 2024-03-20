@@ -10,9 +10,6 @@ export function History() {
         <HistoryContainer>
             <h1>Meu Histórico</h1>
 
-            <pre>
-                {JSON.stringify(cycles, null , 2)}
-            </pre>
             <HistoryList>
                 <table>
                     <thead>
@@ -34,6 +31,7 @@ export function History() {
                                     locale: ptBR,
                                 })}</td>
                                 <td>
+                                   
                                     {cycle.finishedDate && <Status statusColor="green">Concluído</Status>}
                                     {cycle.interruptDate && <Status statusColor="red">Interrompido</Status>}
                                     {!cycle.interruptDate && !cycle.finishedDate && <Status statusColor="yellow">Pendente</Status>}
