@@ -13,24 +13,14 @@ import {CountdownContainer} from "./components/Countdown";
 import {CyclesContext} from "../../contexts/CyclesContext";
 
 
-
-
-
-
-
-
 const newCycleValidationSchema = zod.object({
     task: zod.string().min(1,'Informe a tarefa'),
     minutesAmount: zod.number().min(1).max(60)
 })
 type NewCycleFormData = zod.infer<typeof newCycleValidationSchema>
 
-
-
-
 export function Home() {
     const {createNewCycle, interruptCurrentCycle ,activeCycle} = useContext(CyclesContext)
-
 
     const newCycleForm = useForm<NewCycleFormData>({
         resolver: zodResolver(newCycleValidationSchema),
@@ -55,12 +45,10 @@ export function Home() {
         <HomeContainer>
             <form action="" onSubmit={handleSubmit(handleCreateNewCycle)}>
 
-
                     <FormProvider {...newCycleForm}>
                         <NewCycleForm/>
                     </FormProvider>
                     <CountdownContainer />
-
 
                 {activeCycle ? (
                     <StopCountButton  onClick={interruptCurrentCycle} type="submit">
